@@ -4,14 +4,14 @@ import './App.css';
 import Navbar from './components/Navbar'; 
 
 import Textform from './components/Textform'; 
-//  import About from './components/About';
+ import About from './components/About';
 import React from "react";
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
   
-// } from "react-router-dom";
+} from "react-router-dom";
  
 import { useState } from 'react';
 function App() {
@@ -38,20 +38,20 @@ function App() {
  
   return (
    <>  
-   {/* <Router> */}
+   <Router>
        <Navbar mode={mode} togglemode={togglemode}/>
        
-       {/* <Switch>
+       <Switch>
           <Route path="/about">
             <About />
           </Route>
           
-          <Route path="/"> */}
-          <Textform heading ="text to analyse"  mode={mode}/>
-{/*             
+          <Route path="/"> 
+          <Textform heading ="Write Text Below"  mode={mode}/>
+             
           </Route>
         </Switch>
-        </Router> */}
+        </Router>
     
 
 

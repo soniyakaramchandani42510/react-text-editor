@@ -6,7 +6,6 @@ export default function Navbar(props) {
 const handleupclick =()=>{
     console.log("button pressed"+text);
     let newText= text.toUpperCase();
-   
     setText(newText);
    
     
@@ -44,20 +43,20 @@ const fire =(event)=>{
    </textarea>
   </div>
   
-<button className="btn btn-primary mx-2" onClick={handleupclick}>
+<button className="btn btn-primary mx-2 my-1" onClick={handleupclick}>
 convert to uppercase
 </button>
-<button className="btn btn-primary mx-2" onClick={handleloclick}>
+<button className="btn btn-primary mx-2 my-1" onClick={handleloclick}>
 convert to lowercase
 </button>
-<button className="btn btn-primary mx-2" onClick={handleclearclick}>
+<button className="btn btn-primary mx-2 my-1" onClick={handleclearclick}>
 Clear text
 </button>
 
        </div>
        <div className="container" style= {{color:props.mode==='light'?'black':'white'}}>
-      <h1>text analysis</h1>
-      <p> {text.split(" ").length} words {text.length}  charcters</p>
+      <h1>Text Analysis</h1>
+      <p> {text.split(" ").filter((element)=>{ return element.length!==0}).length} words {text.length}  charcters</p>
       <p>
           {0.08 * text.split(" ").length} minutes to read
       </p>
